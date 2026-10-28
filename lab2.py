@@ -23,7 +23,16 @@ def find_min_max(temperatures):
     return[min_temp,max_temp]
 
 def sort_temperature(temperatures):
-    print("sort_temperature")
+    sorted(temperatures)
 
 def calc_median_temperature(temperatures):
-    print("calc_median_temperature")
+    temperatures = sort_temperature(temperatures)
+    n=len(temperatures)
+    mid = n//2
+
+    if n % 2 ==0:
+        median = (temperatures[mid-1]+temperatures[mid])/2
+    else:
+        median = temperatures[mid]
+
+    return median
